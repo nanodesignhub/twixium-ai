@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twixium.ai - Features</title>
+    <meta name="description" content="Explore the powerful AI-driven features of Twixium.ai, including content creation, smart scheduling, analytics, and more, designed to simplify social media management for small businesses.">
+    <meta name="keywords" content="AI social media features, content creation, social media scheduling, social media analytics, unified inbox, competitor analysis, brand monitoring, team collaboration">
+    <meta name="author" content="Manus AI">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #f50057;
+            --background-color: #f5f7fa;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --error-color: #f44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #303f9f;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c51162;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #666;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-logo-icon {
+            margin-right: 10px;
+        }
+        
+        .footer-description {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" style="height: 40px; margin-right: 10px;">
+                    Twixium.ai
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul class="nav-links">
+                        <li><a href="/features.html">Features</a></li>
+                        <li><a href="/how_it_works.html">How It Works</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/testimonials.html">Testimonials</a></li>
+                        <li><a href="/login.html" class="btn btn-outline">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">AI-Powered Social Media Management for Small Businesses</h1>
+                <p class="hero-subtitle">Explore the powerful features of Twixium.ai designed to simplify your social media strategy and amplify your online presence.</p>
+            </div>
+        </section>
+
+        <section class="features-section" aria-labelledby="features-section-title">
+            <div class="container">
+                <h2 class="section-title" id="features-section-title">Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">auto_awesome</i>
+                        <h3 class="feature-title">AI-Powered Content Creation and Curation</h3>
+                        <p class="feature-description">Generate engaging social media posts, captions, and hashtags with our advanced AI. Save time and ensure your content is always fresh and relevant.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">schedule</i>
+                        <h3 class="feature-title">Smart Scheduling and Publishing</h3>
+                        <p class="feature-description">Optimize your reach by publishing content at the perfect moment. Our AI determines optimal posting times for each of your social media channels.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">analytics</i>
+                        <h3 class="feature-title">Advanced Analytics and Reporting</h3>
+                        <p class="feature-description">Understand your social media performance with in-depth analytics. Gain insights into your reach, engagement, and follower growth.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">inbox</i>
+                        <h3 class="feature-title">Unified Inbox and Engagement Management</h3>
+                        <p class="feature-description">Consolidate all your social media messages, comments, and mentions into a single, easy-to-manage interface. Respond efficiently and build stronger relationships.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">compare_arrows</i>
+                        <h3 class="feature-title">Competitor Analysis</h3>
+                        <p class="feature-description">Stay ahead of the curve by understanding your competitors' strategies. Monitor their social media activity and identify untapped opportunities.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">monitor_heart</i>
+                        <h3 class="feature-title">Brand Monitoring and Reputation Management</h3>
+                        <p class="feature-description">Protect your brand's reputation by staying informed about online conversations. Receive real-time alerts for critical mentions and sentiment analysis.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="material-icons feature-icon" aria-hidden="true">group_add</i>
+                        <h3 class="feature-title">Team Collaboration</h3>
+                        <p class="feature-description">Facilitate seamless teamwork with collaboration features. Assign tasks, share content drafts, and manage approvals within the platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" style="height: 30px; margin-right: 10px;">
+                        Twixium.ai
+                    </div>
+                    <p class="footer-description">AI-powered social media management for small businesses. Simplify your social strategy and amplify your online presence.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="mdi mdi-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="mdi mdi-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="mdi mdi-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="mdi mdi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/features.html">Features</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/how_it_works.html">How It Works</a></li>
+                        <li><a href="/testimonials.html">Testimonials</a></li>
+                        <li><a href="/login.html">Login</a></li>
+                        <li><a href="/signup.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/accessibility.html">Accessibility Statement</a></li>
+          
+(Content truncated due to size limit. Use line ranges to read in chunks)

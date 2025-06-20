@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twixium.ai - Pricing Plans</title>
+    <meta name="description" content="Explore Twixium.ai's flexible and transparent pricing plans for AI-powered social media management, designed for individuals, small businesses, and enterprises.">
+    <meta name="keywords" content="social media management pricing, AI social media plans, Twixium.ai cost, subscription plans, enterprise social media, small business social media tools">
+    <meta name="author" content="Manus AI">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #f50057;
+            --background-color: #f5f7fa;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --error-color: #f44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #303f9f;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c51162;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+        }
+        
+        .pricing-card.featured::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 5px 30px;
+            font-size: 14px;
+            transform: rotate(45deg);
+        }
+        
+        .pricing-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .pricing-price span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-logo-icon {
+            margin-right: 10px;
+        }
+        
+        .footer-description {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" style="height: 40px; margin-right: 10px;">
+                    Twixium.ai
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul class="nav-links">
+                        <li><a href="/features.html">Features</a></li>
+                        <li><a href="/how_it_works.html">How It Works</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/testimonials.html">Testimonials</a></li>
+                        <li><a href="/login.html" class="btn btn-outline">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Simple & Transparent Pricing</h1>
+                <p class="hero-subtitle">Choose the plan that best fits your social media management goals and scale up as your needs grow.</p>
+            </div>
+        </section>
+
+        <section class="pricing-section" aria-labelledby="pricing-section-title">
+            <div class="container">
+                <h2 class="section-title" id="pricing-section-title">Our Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Starter Plan</h3>
+                        <div class="pricing-price">$19<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>3 Social Profiles</li>
+                            <li>Basic AI Content Generation</li>
+                            <li>50 Posts/Month</li>
+                            <li>Standard Analytics</li>
+                            <li>Email Support</li>
+                        </ul>
+                        <a href="/signup.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured" aria-label="Most Popular Plan">
+                        <h3 class="pricing-title">Professional Plan</h3>
+                        <div class="pricing-price">$49<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>10 Social Profiles</li>
+                            <li>Advanced AI Content Generation</li>
+                            <li>Unlimited Posts</li>
+                            <li>Advanced Analytics & Reporting</li>
+                            <li>Priority Email Support</li>
+                            <li>Up to 3 team members</li>
+                        </ul>
+                        <a href="/signup.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Enterprise Plan</h3>
+                        <div class="pricing-price">Custom</div>
+                        <ul class="pricing-features">
+                            <li>Unlimited Social Profiles</li>
+                            <li>Full AI Suite & Custom Models</li>
+                            <li>Unlimited Posts & Campaigns</li>
+                            <li>Dedicated Account Manager</li>
+                            <li>24/7 Premium Support</li>
+                            <li>Unlimited Team Members</li>
+                            <li>API Access and Custom Integrations</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Contact Sales</a>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 60px;">
+                    <h3 class="section-title">Add-Ons (Available for Professional and Enterprise Plans)</h3>
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <h4 class="pricing-title">AI Content Boost Pack</h4>
+                            <p class="feature-description">Enhance your content creation with additional AI credits for generating more unique content ideas and drafts.</p>
+                            <div class="pricing-price">$15<span>/month</span></div>
+                        </div>
+                        <div class="pricing-card">
+                            <h4 class="pricing-title">Advanced Analytics Suite</h4>
+                            <p class="feature-description">Gain deeper insights with advanced data visualization, predictive analytics, and custom KPI tracking.</p>
+                            <div class="pricing-price">$25<span>/month</span></div>
+                        </div>
+                        <div class="pricing-card">
+                            <h4 class="pricing-title">Dedicated IP Address</h4>
+                            <p class="feature-description">For enhanced deliverability and security for your scheduled posts.</p>
+                            <div class="pricing-price">$10<span>/month</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 60px;">
+                    <h3 class="section-title">Billing and Cancellation</h3>
+                    <p class="feature-description">
+                        <ul>
+                            <li>All plans are billed monthly. Annual billing options are available with a discount.</li>
+                            <li>You can upgrade or downgrade your plan at any time. Changes will take effect at the start of your next billing cycle.</li>
+                            <li>You can cancel your subscription at any time. No refunds will be provided for partial months of service.</li>
+(Content truncated due to size limit. Use line ranges to read in chunks)

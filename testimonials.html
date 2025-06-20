@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twixium.ai - Testimonials</title>
+    <meta name="description" content="Read testimonials from satisfied Twixium.ai users and discover how our AI-powered social media management platform has helped them achieve their marketing goals.">
+    <meta name="keywords" content="Twixium.ai reviews, social media success stories, AI social media testimonials, customer feedback, social media management success">
+    <meta name="author" content="Manus AI">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <style>
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #f50057;
+            --background-color: #f5f7fa;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --error-color: #f44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #303f9f;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c51162;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonials-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary-color);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: "\"";
+            font-size: 60px;
+            color: var(--light-gray);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: 0;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-logo-icon {
+            margin-right: 10px;
+        }
+        
+        .footer-description {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-social a {
+            color: var(--white);
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" style="height: 40px; margin-right: 10px;">
+                    Twixium.ai
+                </div>
+                <nav aria-label="Main Navigation">
+                    <ul class="nav-links">
+                        <li><a href="/features.html">Features</a></li>
+                        <li><a href="/how_it_works.html">How It Works</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/testimonials.html">Testimonials</a></li>
+                        <li><a href="/login.html" class="btn btn-outline">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">What Our Users Say</h1>
+                <p class="hero-subtitle">Hear directly from our satisfied users about how Twixium.ai has transformed their social media management and helped them achieve their marketing goals.</p>
+            </div>
+        </section>
+
+        <section class="testimonials-section" aria-labelledby="testimonials-section-title">
+            <div class="container">
+                <h2 class="section-title" id="testimonials-section-title">Customer Success Stories</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" role="region" aria-labelledby="testimonial-sarah-title">
+                        <p class="testimonial-text">"Twixium.ai is a Game-Changer for My Small Business! As a small business owner, managing social media used to be a huge time sink. Twixium.ai changed everything! The AI-powered content suggestions are incredibly helpful, and the smart scheduling ensures my posts go out at the perfect time. My engagement has skyrocketed, and I'm finally seeing real results from my social media efforts. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+L.&background=random&color=fff" alt="Avatar of Sarah L." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 id="testimonial-sarah-title">Sarah L.</h4>
+                                <p>Owner of "Petal & Bloom" Boutique</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="region" aria-labelledby="testimonial-mark-title">
+                        <p class="testimonial-text">"Unparalleled Insights and Efficiency. Our marketing team was struggling to keep up with the demands of multiple social media channels. Twixium.ai's advanced analytics and unified inbox have brought unparalleled efficiency to our workflow. The AI-driven insights are truly invaluable, helping us refine our strategy and make data-backed decisions. It's an essential tool for any serious marketing professional."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Mark+T.&background=random&color=fff" alt="Avatar of Mark T." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 id="testimonial-mark-title">Mark T.</h4>
+                                <p>Marketing Director at "InnovateTech Solutions"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="region" aria-labelledby="testimonial-jessica-title">
+                        <p class="testimonial-text">"Simplified Social Media, Amplified Results. I used to spend hours every week planning and executing my social media content. With Twixium.ai, I can now do it in a fraction of the time. The content creation tools are fantastic, and the ability to manage all my accounts from one dashboard is a lifesaver. My online presence has never been stronger, and I'm reaching a much wider audience."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Jessica+R.&background=random&color=fff" alt="Avatar of Jessica R." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 id="testimonial-jessica-title">Jessica R.</h4>
+                                <p>Freelance Social Media Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="region" aria-labelledby="testimonial-david-title">
+                        <p class="testimonial-text">"Exceptional Support and Powerful Features. From the moment we started using Twixium.ai, we've been impressed. The platform is incredibly powerful, offering features like competitor analysis and brand monitoring that are crucial for our agency. What truly sets them apart is their customer support – always responsive and helpful. Twixium.ai is a key partner in our success."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=David+C.&background=random&color=fff" alt="Avatar of David C." class="testimonial-avatar">
+                            <div class="testimonial-info">
+                                <h4 id="testimonial-david-title">David C.</h4>
+                                <p>CEO of "Digital Ascent Agency"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" role="region" aria-labelledby="testimonial-emily-title">
+                        <p class="testimonial-text">"My Go-To Tool for Content Strategy. The AI content curation feature alone makes Twixium.ai worth every penny. It constantly feeds me fresh, relevant ideas, and helps me stay ahead of trends. It's become my go-to tool for developing and executing my content strategy. If you're serious about social media, you need Twixium.ai."</p>
+                        <div class="testimonial-author">
+                            <img src="https://ui-avatars.com/api/?name=Emily+S.&background=random&color=fff" alt="Avatar of Emily S." class="testimonial-avatar">
+              
+(Content truncated due to size limit. Use line ranges to read in chunks)
