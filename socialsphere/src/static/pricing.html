@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twixium.ai - Pricing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #667eea, #764ba2);
+        }
+        .logo-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .footer-link {
+            color: #a0aec0; /* Tailwind gray-500 */
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" class="h-8 w-8 mr-2" aria-label="Twixium.ai Logo">
+                <a href="/" class="text-2xl font-bold text-gray-800 logo-text" aria-label="Twixium.ai Home">Twixium.ai</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="/features" class="text-gray-800 hover:text-blue-600" aria-label="Features">Features</a>
+                <a href="/how_it_works" class="text-gray-800 hover:text-blue-600" aria-label="How It Works">How It Works</a>
+                <a href="/pricing" class="text-gray-800 hover:text-blue-600" aria-label="Pricing">Pricing</a>
+                <a href="/testimonials" class="text-gray-800 hover:text-blue-600" aria-label="Testimonials">Testimonials</a>
+                <a href="/login" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" aria-label="Login">Login</a>
+                <a href="/signup" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white" aria-label="Sign Up">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Content -->
+    <main class="flex-grow container mx-auto px-6 py-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Flexible Pricing Plans</h1>
+        <p class="text-xl text-gray-600 text-center mb-12">Choose the plan that best fits your social media automation needs.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Basic</h2>
+                <p class="text-5xl font-bold text-blue-600 mb-6">$29<span class="text-xl text-gray-600">/month</span></p>
+                <ul class="text-gray-700 text-lg mb-8 space-y-3">
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>AI Content Generation (Limited)</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>5 Social Accounts</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Basic Scheduling</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Email Support</li>
+                    <li><span class="material-symbols-outlined text-red-500 align-middle mr-2">cancel</span>Advanced Analytics</li>
+                    <li><span class="material-symbols-outlined text-red-500 align-middle mr-2">cancel</span>Priority Support</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg">Choose Basic</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center border-4 border-blue-600">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4">Pro</h2>
+                <p class="text-5xl font-bold text-blue-600 mb-6">$79<span class="text-xl text-gray-600">/month</span></p>
+                <ul class="text-gray-700 text-lg mb-8 space-y-3">
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>AI Content Generation (Unlimited)</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>20 Social Accounts</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Advanced Scheduling</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Audience Engagement Tools</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Advanced Analytics</li>
+                    <li><span class="material-symbols-outlined text-red-500 align-middle mr-2">cancel</span>Priority Support</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg">Choose Pro</button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Enterprise</h2>
+                <p class="text-5xl font-bold text-blue-600 mb-6">Custom</p>
+                <ul class="text-gray-700 text-lg mb-8 space-y-3">
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>All Pro Features</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Unlimited Social Accounts</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Dedicated Account Manager</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Custom Integrations</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Priority 24/7 Support</li>
+                    <li><span class="material-symbols-outlined text-green-500 align-middle mr-2">check_circle</span>Onboarding & Training</li>
+                </ul>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg">Contact Us</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0 mb-4">
+                <a href="/terms" class="footer-link" aria-label="Terms and Conditions">Terms & Conditions</a>
+                <a href="/privacy" class="footer-link" aria-label="Privacy Policy">Privacy Policy</a>
+                <a href="/accessibility" class="footer-link" aria-label="Accessibility Statement">Accessibility Statement</a>
+            </div>
+            <p>&copy; 2025 Twixium.ai. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
