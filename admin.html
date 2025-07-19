@@ -1,1 +1,201 @@
-Inherited file content will not be shown
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twixium.ai - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .logo-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2d3748; /* Dark gray */
+            color: #cbd5e0; /* Light gray */
+            height: 100vh;
+            position: fixed;
+            padding-top: 1rem;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            color: #cbd5e0;
+            transition: background-color 0.2s;
+        }
+        .sidebar a:hover {
+            background-color: #4a5568; /* Slightly lighter gray on hover */
+        }
+        .sidebar a.active {
+            background-color: #4a5568;
+            color: #ffffff;
+        }
+        .sidebar .material-symbols-outlined {
+            margin-right: 0.75rem;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 1.5rem;
+            width: calc(100% - 250px);
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="sidebar">
+        <div class="flex items-center justify-center mb-6">
+            <img src="/static/images/twixium_logo_concept1_blue.png" alt="Twixium.ai Logo" class="h-10 w-10 mr-2" aria-label="Twixium.ai Logo">
+            <span class="text-2xl font-bold text-white logo-text">Twixium.ai Admin</span>
+        </div>
+        <nav>
+            <a href="#dashboard" class="active" id="dashboard-link">
+                <span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+            <a href="#users" id="users-link">
+                <span class="material-symbols-outlined">people</span>
+                Users
+            </a>
+            <a href="#subscriptions" id="subscriptions-link">
+                <span class="material-symbols-outlined">card_membership</span>
+                Subscriptions
+            </a>
+            <a href="#payments" id="payments-link">
+                <span class="material-symbols-outlined">payment</span>
+                Payments
+            </a>
+            <a href="#settings" id="settings-link">
+                <span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+            <a href="#logout" id="logout-link">
+                <span class="material-symbols-outlined">exit_to_app</span>
+                Logout
+            </a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800" id="page-title">Admin Dashboard</h1>
+            <div class="flex items-center">
+                <span class="material-symbols-outlined text-gray-600 mr-2">account_circle</span>
+                <span class="text-gray-800">Admin User</span>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <section id="dashboard-content" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">Total Users</h3>
+                    <span class="material-symbols-outlined text-blue-500 text-3xl">group</span>
+                </div>
+                <p class="text-4xl font-bold text-gray-900">0</p>
+                <p class="text-gray-500">Registered users</p>
+            </div>
+            <div class="card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">Active Subscriptions</h3>
+                    <span class="material-symbols-outlined text-green-500 text-3xl">subscriptions</span>
+                </div>
+                <p class="text-4xl font-bold text-gray-900">0</p>
+                <p class="text-gray-500">Current active plans</p>
+            </div>
+            <div class="card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">Monthly Revenue</h3>
+                    <span class="material-symbols-outlined text-purple-500 text-3xl">attach_money</span>
+                </div>
+                <p class="text-4xl font-bold text-gray-900">$0</p>
+                <p class="text-gray-500">Last 30 days</p>
+            </div>
+            <div class="card col-span-1 md:col-span-3">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">Content Created</h3>
+                    <span class="material-symbols-outlined text-yellow-500 text-3xl">article</span>
+                </div>
+                <p class="text-4xl font-bold text-gray-900">0</p>
+                <p class="text-gray-500">Posts created</p>
+            </div>
+        </section>
+
+        <!-- Users Content -->
+        <section id="users-content" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">User Management</h2>
+            <div class="card">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">ID</th>
+                            <th class="py-2 px-4 border-b">Email</th>
+                            <th class="py-2 px-4 border-b">Admin</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                        <!-- User data will be loaded here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Subscriptions Content -->
+        <section id="subscriptions-content" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Subscription Management</h2>
+            <div class="card">
+                <p>Subscription data will be displayed here.</p>
+            </div>
+        </section>
+
+        <!-- Payments Content -->
+        <section id="payments-content" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Payment Management</h2>
+            <div class="card">
+                <p>Payment data will be displayed here.</p>
+            </div>
+        </section>
+
+        <!-- Settings Content -->
+        <section id="settings-content" class="hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Settings</h2>
+            <div class="card">
+                <p>Settings will be managed here.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Logout Modal -->
+    <div id="logoutModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <h3 class="text-lg font-medium leading-6 text-gray-900">Confirm Logout</h3>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500">Are you sure you want to log out?</p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button id="confirmLogout" class="px-4 py-2 bg-red-600 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Logout</button>
+                <button id="cancelLogout" class="mt-3 px-4 py-2 bg-white text-gray-700 text-base font-medium rounded-md w-full shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/auth.service.js"></script>
+    <script src="/static/js/admin.js"></script>
+    <script src="/static/js/admin_menu_fix.js"></script>
+</body>
+</html>
+
+
